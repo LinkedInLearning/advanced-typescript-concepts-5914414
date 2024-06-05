@@ -4,7 +4,7 @@ function printSomething<Type>(arg: Type): Type {
 }
 
 
-function printSomething<T, U, V>(arg1: T, arg2: U): V {
+function printSomething2<T, U, V>(arg1: T, arg2: U): V {
   // some body that logically results in a value of type V
   // This is a placeholder example. Real implementation depends on the specific logic needed.
   let result: any;
