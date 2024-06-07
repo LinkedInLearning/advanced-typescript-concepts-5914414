@@ -5,3 +5,7 @@ class SomeList<T = string> {
     this.list.push(t)
   }
 }
+
+const stringList = new SomeList();
+stringList.add("TS");
+stringList.add("is cool");
