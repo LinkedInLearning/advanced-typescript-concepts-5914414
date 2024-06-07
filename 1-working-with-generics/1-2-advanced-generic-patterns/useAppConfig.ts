@@ -10,3 +10,6 @@ const appConfig: AppConfig = {
   logLevel: 'info',
   port: 3000
 };
+
+const debugStatus = getConfigValue(appConfig, 'debug');
+const appPort = getConfigValue(appConfig, 'port');
