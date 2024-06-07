@@ -11,7 +11,7 @@ function logMethod(target: any, key: string, descriptor: PropertyDescriptor) {
 }
 
 class MathOperations {
-  @logMethod
+  //@logMethod
   add(x: number, y: number): number {
     return x + y;
   }
