@@ -1,7 +1,8 @@
 const path = require('path');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production', // Enable production mode
   entry: './src/app.ts',
   output: {
     filename: 'bundle.js',
@@ -18,5 +19,18 @@ module.exports = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
-  }
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all', // Enable code splitting
+    }
+  },
+  plugins: [
+    new CompressionPlugin({
+      algorithm: 'gzip',
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8
+    })
+  ]
 };
