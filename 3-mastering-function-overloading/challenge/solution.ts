@@ -1,4 +1,4 @@
-function sendMessage(content: string | { html: string }): void {
+function sendMessage(content: any): void {
   if (typeof content === "string") {
     console.log("Sending text message:", content);
   } else {
