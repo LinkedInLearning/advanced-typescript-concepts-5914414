@@ -13,3 +13,6 @@ class KeyValuePair<K, V> {
     console.log(`Key: ${this.key} - Value: ${this.value}`);
   }
 }
+
+let pair = new KeyValuePair<string, string>("url", "something.com");
+pair.displayPair();
