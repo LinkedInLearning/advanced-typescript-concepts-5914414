@@ -6,5 +6,5 @@ type StringifiedPerson = {
  
 const stringPerson: StringifiedPerson = {
   name: "Pradeepa",
-  age: "30"  // Note: 'age' is now a string
+  age: "30" // Note: 'age' is now a string
 };
