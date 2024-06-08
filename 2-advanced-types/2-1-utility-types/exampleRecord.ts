@@ -6,4 +6,4 @@ const userStatus: Record<number, Status> = {
   3: "pending",
 };
 
-console.log(userStatus[1]); // Output: "active" (video)
+console.log(userStatus[1]); // Output: "active" 
