@@ -9,4 +9,4 @@ const user: Readonly<User> = {
 };
 
 // Error: Cannot assign to 'name' because it is a read-only property.
-user.name = "Marya A";
+// user.name = "Marya A";
