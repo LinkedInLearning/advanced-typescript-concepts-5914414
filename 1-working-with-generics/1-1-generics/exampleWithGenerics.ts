@@ -3,6 +3,9 @@ function printSomething<Type>(arg: Type): Type {
   return arg;
 }
 
+let someValue = printSomething<string>("something");
+// let someValue2 = printSomething<string>(3);
+let someValue3 = printSomething("some other thing");
 
 function printSomething2<T, U, V>(arg1: T, arg2: U): V {
   // some body that logically results in a value of type V

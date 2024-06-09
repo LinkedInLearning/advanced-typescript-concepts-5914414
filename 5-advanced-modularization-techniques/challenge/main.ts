@@ -1,4 +1,11 @@
-// no imports necessary up here now
+// No imports necessary up here now
+
+type ModuleCache = {
+  Analytics?: { Analytics: { recordEvent: (event: string) => void } };
+  UserManagement?: { UserManagement: { loadUserProfile: (userId: string) => void } };
+};
+
+const moduleCache: ModuleCache = {};
 
 const recordBtn = document.getElementById('record-btn');
 if (!recordBtn) {
@@ -6,8 +13,10 @@ if (!recordBtn) {
 } else {
   recordBtn.addEventListener('click', async () => {
     try {
-      const { Analytics } = await import('./analytics');
-      Analytics.recordEvent('Button Clicked');
+      if (!moduleCache.Analytics) {
+        moduleCache.Analytics = await import('./analytics');
+      }
+      moduleCache.Analytics.Analytics.recordEvent('Button Clicked');
     } catch (error) {
       console.error("Failed to load the analytics module.", error);
     }
@@ -20,8 +29,10 @@ if (!loadProfileBtn) {
 } else {
   loadProfileBtn.addEventListener('click', async () => {
     try {
-      const { UserManagement } = await import('./userManagement');
-      UserManagement.loadUserProfile('user123');
+      if (!moduleCache.UserManagement) {
+        moduleCache.UserManagement = await import('./userManagement');
+      }
+      moduleCache.UserManagement.UserManagement.loadUserProfile('user123');
     } catch (error) {
       console.error("Failed to load the user management module.", error);
     }
