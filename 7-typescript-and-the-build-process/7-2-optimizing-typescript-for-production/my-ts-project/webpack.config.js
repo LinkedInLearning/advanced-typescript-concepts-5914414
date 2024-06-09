@@ -1,8 +1,13 @@
 const path = require('path');
+const CompressionPlugin = require('compression-webpack-plugin');
+
 
 module.exports = {
-  mode: 'development',
-  entry: './src/index.ts',
+  mode: 'production',
+  entry: {
+    app: './src/index.ts',
+    vendor: './src/vendor.ts'
+  },
   module: {
     rules: [
       {
@@ -16,7 +21,17 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js']
   },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist')
-  }
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  },
+  plugins: [
+    new CompressionPlugin({
+      algorithm: 'gzip'  // Specify the Gzip compression algorithm
+    })
+  ]
 };
