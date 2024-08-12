@@ -16,7 +16,6 @@ function fetchUserData<Status extends 'success' | 'error'>(status: Status): ApiR
   if (status === 'success') {
     // Simulating a successful API response
     return {
-      id: 1,
       username: 'johndoe',
       email: 'john.doe@example.com'
     } as ApiResponse<Status>;
