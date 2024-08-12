@@ -1,4 +1,4 @@
-class ProductManagement {
+export class ProductManagement {
   createProduct(name: string, price: number) {
     console.log(`Product created: ${name}, Price: ${price}`);
   }
