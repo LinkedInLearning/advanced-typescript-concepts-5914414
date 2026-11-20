@@ -14,6 +14,20 @@ console.log(stringResponse);
 const numbersResponse = createResponse<number[]>(200, "OK", [1, 2, 3, 4]);
 console.log(numbersResponse);
 
+function createResponse<T>(
+  status: number,
+  message: string,
+  data: T,
+): Response<T> {
+  return { status, message, data };
+}
 
+const stringResponse = createResponse<string>(
+  200,
+  "Ok",
+  "This is a successful response",
+);
+console.log(stringResponse);
 
-
+const numbersResponse = createResponse<number[]>(200, "Ok", [1, 2, 3, 4, 5]);
+console.log(numbersResponse);

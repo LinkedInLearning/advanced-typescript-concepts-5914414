@@ -7,12 +7,15 @@ class KeyValuePair<K, V> {
     this.value = value;
   }
 
-  // accessors 
+  // accessors
 
   displayPair(): void {
     console.log(`Key: ${this.key} - Value: ${this.value}`);
   }
 }
+
+const pair = new KeyValuePair<string, string>("url", "something_url.com");
+pair.displayPair();
 
 let pair = new KeyValuePair<string, string>("url", "something.com");
 pair.displayPair();
