@@ -15,3 +15,10 @@ const task: Task = {
 };
 
 const updatedTask = updateTask(task, { completed: true });
+console.log(updatedTask); /* Outputs:
+  {
+    title: 'Learn TypeScript',
+    description: 'Understand utility types',
+    completed: true
+  }
+*/

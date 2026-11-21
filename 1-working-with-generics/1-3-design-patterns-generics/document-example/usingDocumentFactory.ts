@@ -11,6 +11,6 @@ excelDoc.printContent();
 
 try {
   const pdfDoc = factory.createDocument("pdf");
-} catch(error) {
-  console.log(error);
+} catch (error) {
+  console.error(error);
 }

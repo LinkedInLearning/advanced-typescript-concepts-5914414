@@ -1,7 +1,7 @@
 import { Document } from "./Document";
 
 export class WordDocument implements Document {
-  content: string;
+  content: string = "";
   name = "Text document";
   postfix = "docx";
   printContent(): void {

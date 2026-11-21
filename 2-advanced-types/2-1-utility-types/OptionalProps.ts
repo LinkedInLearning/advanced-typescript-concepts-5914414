@@ -7,4 +7,4 @@ function configureSettings(settings: Required<OptionalProps>) {
   console.log(`Name: ${settings.name}, Age: ${settings.age}`);
 }
 
-configureSettings({ name: "Gaia", age: 9 });
+configureSettings({ name: "Dilshod", age: 21 });

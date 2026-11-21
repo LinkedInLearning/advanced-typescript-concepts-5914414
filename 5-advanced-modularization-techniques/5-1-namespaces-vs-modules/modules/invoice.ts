@@ -1,3 +1,3 @@
 export class Invoice {
-  constructor(public amount: number) { }
+  constructor(public amount: number) {}
 }

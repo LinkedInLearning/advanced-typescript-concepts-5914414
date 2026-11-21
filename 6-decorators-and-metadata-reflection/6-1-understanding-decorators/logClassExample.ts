@@ -4,6 +4,8 @@ function logClass(target: Function) {
 
 @logClass
 class User {
-  constructor(public name: string, public age: number) { }
+  constructor(
+    public name: string,
+    public age: number,
+  ) {}
 }
-

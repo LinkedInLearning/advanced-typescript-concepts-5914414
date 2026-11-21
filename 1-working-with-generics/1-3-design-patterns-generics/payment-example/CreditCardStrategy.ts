@@ -1,4 +1,4 @@
-import { PaymentStrategy } from './PaymentStrategy';
+import { PaymentStrategy } from "./PaymentStrategy";
 
 export class CreditCardStrategy implements PaymentStrategy {
   processPayment(amount: number): string {
