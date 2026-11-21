@@ -1,3 +1,3 @@
 export function verySpecialFeature() {
-    return 'Very special feature';
+  return "Very special feature";
 }

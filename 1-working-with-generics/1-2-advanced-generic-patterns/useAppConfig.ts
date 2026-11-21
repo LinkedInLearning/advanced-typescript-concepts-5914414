@@ -7,9 +7,12 @@ function getConfigValue<Type, Key extends keyof Type>(config: Type, key: Key) {
 // Example usage:
 const appConfig: AppConfig = {
   debug: true,
-  logLevel: 'info',
-  port: 3000
+  logLevel: "info",
+  port: 3000,
 };
 
-const debugStatus = getConfigValue(appConfig, 'debug');
-const appPort = getConfigValue(appConfig, 'port');
+const debugStatus = getConfigValue(appConfig, "debug");
+const appPort = getConfigValue(appConfig, "port");
+
+console.log(debugStatus); // Outputs: "info"
+console.log(appPort); // Outputs: 3000

@@ -8,7 +8,5 @@ type TodoPreview = Pick<Todo, "title" | "completed">;
 
 const todoPreview: TodoPreview = {
   title: "Finish article",
-  completed: false
+  completed: false,
 };
-
-

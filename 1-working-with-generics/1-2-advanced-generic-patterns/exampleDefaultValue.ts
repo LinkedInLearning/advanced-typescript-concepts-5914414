@@ -1,11 +1,11 @@
 class SomeList<T = string> {
-  private readonly list: T[] = []
+  private readonly list: T[] = [];
 
   add(t: T) {
-    this.list.push(t)
+    this.list.push(t);
   }
 }
 
 const stringList = new SomeList();
-stringList.add("TS");
-stringList.add("is cool");
+stringList.add("Hello");
+stringList.add("World");

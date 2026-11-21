@@ -1,18 +1,12 @@
-
 function processData(data: unknown): void {
-  if (typeof data === 'string') {
-    console.log("String data:", data);
-  } else if (typeof data === 'number') {
-    console.log("Number data:", data);
-  } else if (Array.isArray(data)) {
+  if (typeof data === "string") console.log("String data:", data);
+  else if (typeof data === "number") console.log("Number data:", data);
+  else if (Array.isArray(data))
     console.log("Array data with length " + data.length + ":", data);
-  } else if (typeof data === 'object' && data !== null) {
+  else if (typeof data === "object" && data !== null)
     console.log("Object data:", data);
-  } else if (data === null) {
-    console.log("Null data");
-  } else {
-    console.log("Unhandled type of data:", data);
-  }
+  else if (data === null) console.log("Null data");
+  else console.log("Unhandled type of data:", data);
 }
 
 // Example usage

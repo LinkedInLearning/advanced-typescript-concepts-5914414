@@ -1,4 +1,4 @@
-function printSomething3(arg: string): string {
+function printSomethingString(arg: string): string {
   console.log(arg);
   return arg;
 }

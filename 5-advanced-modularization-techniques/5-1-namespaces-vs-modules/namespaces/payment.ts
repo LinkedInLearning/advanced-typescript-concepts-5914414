@@ -1,6 +1,6 @@
 namespace Payment {
   export class Invoice {
-    constructor(public amount: number) { }
+    constructor(public amount: number) {}
   }
 
   export function calculateTotal(invoices: Invoice[]) {
@@ -10,4 +10,4 @@ namespace Payment {
 
 // Usage
 let invoices = [new Payment.Invoice(100), new Payment.Invoice(200)];
-console.log(Payment.calculateTotal(invoices));  // Outputs: 300
+console.log(Payment.calculateTotal(invoices)); // Outputs: 300

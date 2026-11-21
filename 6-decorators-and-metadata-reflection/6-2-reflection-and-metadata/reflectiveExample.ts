@@ -1,6 +1,9 @@
 import "reflect-metadata";
 
-function ReflectiveDecorator(target: any, propertyKey: string) {
+function ReflectiveDecorator(
+  target: object,
+  propertyKey: string | symbol,
+): void {
   Reflect.defineMetadata("role", "user", target, propertyKey);
 }
 
@@ -18,17 +21,19 @@ class User {
   }
 }
 
-console.log(Reflect.getMetadata("role", User.prototype, "greet"));  // Outputs: "admin"
+console.log(Reflect.getMetadata("role", User.prototype, "greet")); // Outputs: "user"
 
 function RoleCheck(roleRequired: string) {
-  return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+  return function (
+    target: any,
+    propertyKey: string,
+    descriptor: PropertyDescriptor,
+  ) {
     const originalMethod = descriptor.value;
     descriptor.value = function (...args: any[]) {
-      if (Reflect.getMetadata("role", target, propertyKey) === roleRequired) {
+      if (Reflect.getMetadata("role", target, propertyKey) === roleRequired)
         return originalMethod.apply(this, args);
-      } else {
-        console.error(`Access denied for method ${propertyKey}`);
-      }
+      else console.error(`Access denied for method ${propertyKey}`);
     };
   };
 }
@@ -42,5 +47,4 @@ class SecureSystem {
 }
 
 const system = new SecureSystem();
-system.deleteUser();  // Executes correctly if the role matches "admin"
-
+system.deleteUser(); // Executes correctly if the role matches "admin"

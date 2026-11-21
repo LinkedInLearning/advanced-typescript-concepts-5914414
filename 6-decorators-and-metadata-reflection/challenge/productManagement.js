@@ -20,7 +20,7 @@ class ProductManagement {
 }
 __decorate([
     decorators_1.Log,
-    (0, decorators_1.Role)("user"),
+    (0, decorators_1.Role)("admin"),
     (0, decorators_1.Authorize)("admin"),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, Number]),

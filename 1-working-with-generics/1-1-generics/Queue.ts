@@ -24,3 +24,4 @@ export class Queue<T> {
     return this.storage[0];
   }
 }
+

@@ -4,11 +4,9 @@ function sendMessage(content: { html: string }): void; // HTML message
 
 // Unified function implementation
 function sendMessage(content: string | { html: string }): void {
-  if (typeof content === "string") {
+  if (typeof content === "string")
     console.log("Sending text message:", content);
-  } else {
-    console.log("Sending HTML message:", content.html);
-  }
+  else console.log("Sending HTML message:", content.html);
 }
 
 // Usage examples

@@ -1,7 +1,7 @@
 import { Document } from "./Document";
 
 export class ExcelDocument implements Document {
-  content: string;
+  content: string = "";
   name = "Table document";
   postfix = "xlsx";
   printContent(): void {

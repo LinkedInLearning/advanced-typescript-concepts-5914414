@@ -1,8 +1,8 @@
-import { Log, Authorize, Role } from './decorators';
+import { Log, Authorize, Role } from "./decorators";
 
 class ProductManagement {
   @Log
-  @Role("user")
+  @Role("admin")
   @Authorize("admin")
   createProduct(name: string, price: number) {
     console.log(`Product created: ${name}, Price: ${price}`);

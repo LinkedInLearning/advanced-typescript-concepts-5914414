@@ -6,4 +6,5 @@ const userStatus: Record<number, Status> = {
   3: "pending",
 };
 
-console.log(userStatus[1]); // Output: "active" 
+console.log(userStatus[1]); // Output: "active"
+console.log(userStatus[3]); // Output: "pending"

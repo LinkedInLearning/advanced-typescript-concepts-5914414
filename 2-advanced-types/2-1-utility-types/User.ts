@@ -8,5 +8,8 @@ const user: Readonly<User> = {
   name: "Malika Z",
 };
 
+console.log(user.id);
+console.log(user.name);
+
 // Error: Cannot assign to 'name' because it is a read-only property.
 // user.name = "Marya A";
